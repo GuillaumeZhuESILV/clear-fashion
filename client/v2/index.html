@@ -20,11 +20,22 @@
         <select name="page" id="page-select"> </select>
       </div>
       <div id="filters">
-        <span>By reasonable price</span>
-        <span>By recently released</span>
+        <button id="price"><span>By reasonable price</span></button>
+        <button id="recent"><span>By recently released</span></button>
+        
         <div id="brand">
           <label for="brand-select">By brands:</label>
-          <select name="brand" id="brand-select"> </select>
+          <select name="brand" id="brand-select"> 
+            <option >All</option>
+            <option value="coteleparis">coteleparis</option>
+            <option value="dedicated">dedicated</option>
+            <option value="aatise">aatise</option>
+            <option value="adresse">adresse</option> 
+            <option value="1083">1083</option>
+            <option value="hast">hast</option>
+            <option value="loom">loom</option>
+            <option value="panafrica">panafrica</option>
+          </select>
         </div>
       </div>
       <div id="sort">
@@ -48,24 +59,24 @@
         <span id="nbBrands">0</span>
       </div>
       <div>
-        <span>Number of new products</span>
-        <span>0</span>
+        <span >Number of new products</span>
+        <span id="newProducts">0</span>
       </div>
       <div>
         <span>p50 price value</span>
-        <span>0</span>
+        <span id="p50">0</span>
       </div>
       <div>
         <span>p90 price value</span>
-        <span>0</span>
+        <span id="p90">0</span>
       </div>
       <div>
         <span>p95 price value</span>
-        <span>0</span>
+        <span id="p95">0</span>
       </div>
       <div>
         <span>Last released date</span>
-        <span>2020-01-01</span>
+        <span id="lastReleased">2020-01-01</span>
       </div>
     </section>
     <section id="products"></section>
