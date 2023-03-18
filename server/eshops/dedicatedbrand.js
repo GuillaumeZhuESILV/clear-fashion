@@ -45,7 +45,8 @@ const extractProduct = ($, element) => {
     .find('.productList-image')
     .children('img')
     .attr('src');
-  return { name, price, link, brand, image };
+  const date= new Date();
+  return { name, price, link, brand, date, image };
 };
 
 /**

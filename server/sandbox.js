@@ -20,6 +20,7 @@ const url_circlesportswear=["https://shop.circlesportswear.com/collections/colle
 // Define an empty array for storing the all products                        
 let final=[]
 
+
 //Define a sandbox function to scrape all products
 async function sandbox (eshop = 'https://www.dedicatedbrand.com/en/') {
   try {
@@ -49,10 +50,10 @@ async function sandbox (eshop = 'https://www.dedicatedbrand.com/en/') {
     final=final.concat(products)
    
     //Log the final array of products
-    console.log(final);
+    //console.log(final);
     console.log("Number of products on circle sportswear :",number_product_circle);
     console.log("Number of products on montlimart :",number_product_montlimart);
-    console.log("Number of products on dedicated :",final.length-number_product_montlimart)
+    console.log("Number of products on dedicated :",final.length-number_product_montlimart);
     console.log("Total number of products =",final.length);
 
     // Write the final result to a JSON file
@@ -60,7 +61,7 @@ async function sandbox (eshop = 'https://www.dedicatedbrand.com/en/') {
 
     //console.log('done');
     process.exit(0);
-    
+   
   } catch (e) {
     console.error(e);
     process.exit(1);
@@ -70,3 +71,9 @@ async function sandbox (eshop = 'https://www.dedicatedbrand.com/en/') {
 const [,, eshop] = process.argv;
 
 sandbox(eshop);
+
+
+
+
+
+

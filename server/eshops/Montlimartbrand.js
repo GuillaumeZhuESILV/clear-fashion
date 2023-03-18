@@ -27,8 +27,8 @@ const parse = data => {
           .find('.product-miniature__thumb-link')
           .children('img')
           .attr('data-full-size-image-url');
-
-          return {name, price,brand,link,image};
+          const date= new Date()
+          return { name, price, link, brand, date, image };
       })
       .get();
 };
