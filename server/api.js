@@ -33,16 +33,8 @@ app.get("/products", (request, response) => {
   });
 });
 
-app.get("/products/:id", (request, response) => {
-  collection.findOne({ "_id": new ObjectId(request.params.id) }, (error, result) => {
-      if(error) {
-          return response.status(500).send(error);
-      }
-      response.send(result);
-  });
-});
-
-
+//test
+/*http://localhost:8092/products/search?limit=10&brand=Dedicated&price=7 */
 
 app.get("/products/search", (req, res) => {
   const limit = parseInt(req.query.limit) || 12;
@@ -70,6 +62,15 @@ app.get("/products/search", (req, res) => {
       const total = result.length;
       res.send({ limit, total, results: result });
     });
+});
+
+app.get("/products/:id", (request, response) => {
+  collection.findOne({ "_id": new ObjectId(request.params.id) }, (error, result) => {
+      if(error) {
+          return response.status(500).send(error);
+      }
+      response.send(result);
+  });
 });
 
 
